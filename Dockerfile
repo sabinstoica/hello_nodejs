@@ -1,10 +1,9 @@
 FROM node:16-alpine
 
-WORKDIR /app
-
-RUN npm install -g contentful-cli
+WORKDIR '/app'
 
 COPY package.json .
+
 RUN npm install
 
 COPY . .
